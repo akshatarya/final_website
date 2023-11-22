@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Teko">
+        <title>Pets</title>
+    </head>
+
+    <body>
+        <a href = "#main" class = "skip"> Skip to main content </a>
+
+        <nav>
+            <ul class = "nav_items">
+                <li> <a href = "index.html" id = "travel"> Home/Travel </a> </li>
+                <li> <a href = "pets.html" class = "current" id = "pets"> Pets </a> </li>
+                <li> <a href = "recipes.html" id = "recipes"> Recipes </a> </li>
+                
+            </ul>
+        </nav>
+
+        <div id = "button">
+            <button id="playButton" onClick="playPause()">
+                <audio src="music/In_The_Peak_Bar.mp3" loop></audio>
+                Play/Pause Music
+            </button>
+        </div>
+
+        <header> 
+            <div><img class = "icon" src = "images/pets-icon.png" alt = ""></div>
+
+            <h1> Pets </h1>
+
+            <div class="dropdown">
+                <button onclick="showDropdown()" class="openButton">Contents</button>
+                <div id="contentsDropdown" class="dropdown-content">
+                    <a href = "#Basil">Basil</a>
+                    <a href = "#Cooky">Cooky</a>
+                    <a href = "#Bacon">Bacon Q Dog</a>
+                    <a href = "#Hachi">Hachi</a>
+                    <a href = "#Cooper">Cooper</a>
+                </div>
+            </div>
+        </header>
+
+        <script>
+            let aud = document.getElementById("playButton").children[0];
+            let isPlaying = false;
+            aud.pause();
+          
+            function playPause() {
+              if (isPlaying) {
+                aud.pause();
+              } else {
+                aud.play();
+              }
+              isPlaying = !isPlaying;
+            }
+
+            function showDropdown() {
+                document.getElementById("contentsDropdown").classList.toggle("show");
+            }
+
+            window.onclick = function(event) {
+                if (!event.target.matches('.openButton')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+        </script>
+
+        <main id = "main" class = "pets">
+            <div id = "Basil">     
+                <h2>Basil</h2>
+                
+                <div class = "description">
+                    <img class = "thumbnail" width = "400" src = "images/gurl_who_u_looking_at.png" 
+                    alt="Fluffy white dog with paw on knee, begging for attention and giving you the side eye">
+                    
+                    <div>
+                        <p>Basil, otherwise known as Slaysil, is a very energetic white, slightly crusty and 
+                            trusty, dog (bichon). She gets princess treatment in her household, but also out in public. 
+                            As a consequence, she is very clingy and loves to lick, especially in the face. 
+                        </p>
+                        <p>    
+                            She endeavors in multiple hobbies and activities, which include flying, licking, 
+                            standing on two legs, ringing bells, and jumping through hula hoops.
+                        </p>
+                    </div>
+                </div>
+
+                    <h3>Photo Gallery</h3>
+                    <div class = "gallery">
+                        <div class = "first"><img class = "left" width="200" src="images/naruto_basil.png" alt="White bichon in a Naruto robe (Akatsuki)"></div>
+                        <div class = "second"><img class = "right" width="200" src="images/balloosil.png" alt="Balloon attached to white bichon"></div>
+                        <div class = "third"><img class = "left" width="200" src="images/pet_me.png" alt="White bichon leaning against leg"></div>
+                        <div class = "fourth"><img class = "right" width="200" src="images/superbasil_HOP.png" alt="White bichon floating in the air while running"></div>
+                    </div>
+
+                <h3>Likes</h3>
+                <ul>
+                    <li>Empty water bottles</li>
+                    <li>Socks</li>
+                    <li>Cats</li>
+                </ul>
+                <!-- Bianca and Alina -->
+            </div>
+
+
+            <div id = "Cooky">
+                <h2>Cooky</h2>
+                
+                <div class = "description">
+                    <img class="thumbnail" id="cooky_smile" width="400" src="images/cookysmiley.jpg" alt="White and gray Bernedoodle sitting on a couch and smiling">
+
+                    <div>
+                        <p>Cooky is an 11 month old Bernedoodle. He likes to play, run around,
+                            go on walks, eat snacks and treats (not his own dog food), get pets
+                            and belly rubs, and cuddle. You can usually find him playing with 
+                            his toys in the living room, chilling in the office room with my 
+                            dad, or cooling off in the garage.
+                        </p>
+                        <p>    
+                            He's still a baby, but he can get super hyper. Whenever someone
+                            rings the doorbell, Cooky gets really excited, barking and dashing
+                            towards the front door. He also jumps really high when he's hyper 
+                            and wags his tail like crazy. Overall, though, he likes to chill
+                            and cuddle just as much as he likes to play.
+                        </p>
+                    </div>
+                </div>
+                
+                <h3>Photo Gallery</h3>
+                <div class = "gallery">
+                    <div class = "first"><img class = "left" width="200" src="images/cookytreat.jpg" alt="Cooky eating one of his favorite treats while lying on the ground"></div>
+                    <div class = "second"><img class = "right" width="200" src="images/cookytired.jpg" alt="Cooky tired laying on the ground"></div>
+                    <div class = "third"><img class = "left" width="200" src="images/cookycone.jpg" alt="Cooky with long hair sitting with a dog cone on his head"></div>
+                    <div class = "fourth"><img class = "right" width="200" src="images/cookyzoom.jpg" alt="Hachi enjoying human food"></div>
+                </div>
+
+                <h3>Likes</h3>
+                <ul>
+                    <li>Dog Cookies</li>
+                    <li>People and belly rubs</li>
+                    <li>Running around the house</li>
+                </ul>
+                <!--Saicharan Vemuri -->
+            </div>
+            
+            <div id = "Bacon">
+                <h2>Bacon Q Dog</h2>
+
+                <div class = "description">
+                    <img class = "thumbnail" src="images/bacon.jpg" width = "400" alt="Brown labradoodle wearing colorful lei">
+
+                    <div>
+                        <p>Bacon Q. Dog is a 9yr old labradoodle. He prefers to spend his days lounging among the three different beds/couches that his family has gifted him. He enjoys a walk or two around the neighborhood, as long as he can pretend that he doesn't see any of the other animals to avoid the embarrassment of not wanting to admit he has no wolf-like skills in chasing them. 
+                        </p>
+                        <p>
+                        At night just as the rest of the family is ready to relax, Bacon suddenly wants to release all of his energy. He will place his toys on a mini couch and frantically drag the couch around, giving his toys "a ride." There is also a lot of rolling. Lots and lots of rolling.
+                        </p>
+                    </div>
+                </div>    
+
+                    <h3>Photo Gallery</h3>
+                    <div class = "gallery">
+                        <div class = "first"><img class = "left" src="images/bacon_bandana.JPG" width ="200" alt = "Brown labradoodle wearing an orange bandana"></div>
+                        <div class = "second"><img class = "right" src="images/bacon_graduation.JPG"  width ="200" alt="Small labradoodle puppy wearing a graduation cap and gown"></div>
+                        <div class = "third">
+                            <video class = "left" width="200"  controls>
+                                <source src="images/bacon_agility.mov">
+                                Your browser does not support the video tag.  This was a video of a girl and dog demonstrating a sit and stay procedure
+                            </video>
+                        </div>
+                        <div class = "fourth"><img class = "right" src="images/bacon_halloween.JPG"  width ="200" alt="Brown labradoodle wearing a pirate costume"></div>
+                    </div>
+                
+
+                <h3>Likes</h3>
+                <ul>
+                    <li>Belly rubs</li>
+                    <li>Playing tug-of-war</li>
+                    <li>Sneaking onto the couch</li>
+                </ul>
+                <!-- Colleen van Lent -->
+            </div>
+
+            <div id = "Hachi">
+                <h2>Hachi</h2>
+
+                <div class = "description">
+                    <img class="thumbnail" id="Hachi_Lawn" width="400" src="images/hachi_onlawn.jpg" alt="Akita named Hachi sitting on the front lawn">
+                    
+                    <div>
+                        <p>Hachi is a 13 year old Akita. He's a very old boy who 
+                            likes to play in snow and run laps around our yard. He is
+                            super nice and never bites. He is timid but friendly and 
+                            will always come and greet visitors with a smile and a few barks.
+                        </p>
+                        <p>
+                            Hachi is a jealous dog. Although shy, he does not like it 
+                            when other dogs steal attention from him and he will 
+                            lightly bite them. When Hachi shared the house with 
+                            another dog, a small poodle, he would constantly bicker
+                            with the poodle when it was being loud.
+                        </p>
+                    </div>
+                </div>
+
+                <h3>Photo Gallery </h3>
+                <div class = "gallery">
+                    <div class = "first"><img class = "left" id="Hachi_sleeping" width="200" src="images/hachi_sleeping.jpg" alt="Hachi sleeping on the kitchen floor"></div>
+                    <div class = "second"><img class = "right" id="hachi_snow" width="200" src="images/hachi_snow.jpg" alt="Hachi playing in the snow"></div>
+                    <div class = "third"><img class = "left" id="Hachi_carride" width="200" src="images/hachi_carride.jpg" alt="Hachi going on a caride"></div>
+                    <div class = "fourth"><img class = "right" id="hachi_eating" width="200" src="images/hachi_eating.jpg" alt="Hachi enjoying human food"></div>
+                </div>
+
+                <h3>Likes</h3>
+                <ul>
+                    <li>Snow</li>
+                    <li>Being around people</li>
+                    <li>Eating Human food</li>
+                </ul>
+                <!--Matthew Sun -->
+            </div>
+
+            <div id = "Cooper">
+                <h2>Cooper</h2>
+                
+                <div class = "description">
+                    <img class="thumbnail" id="Cooper" width="400" src="images/cooper.jpeg" alt="Border collie and lab mix laying his head on his stuffed animal toy">
+
+                    <div>
+                        <p>Cooper is an 8-year-old border collie and lab mix. We rescued him from the Humane Society as a puppy!
+                            He loves going on long walks/runs, but he stops to sniff something every few steps. He's pretty friendly, but he loves to loudly bark at delivery people who ring the doorbell.
+                        </p>
+                        <p>
+                            Whenever it's movie night, Cooper has to join on the couch/bed or he feels left out. He loves
+                            to cuddle and pats on his tummy. Cooper will play fetch for about 2 or 3 rounds, but he
+                            quickly gets bored. He leaves his toys all around the house for the rest of the family to find.
+                        </p>
+                    </div>
+                </div>      
+
+                <h3>Photo Gallery</h3>
+                <div class = "gallery">
+                    <div class = "first"><img class = "left" id="cooper_closeup" width="200" src="images/cooper_closeup.JPG" alt="Border collie / lab mix putting his face close to the camera"></div>
+                    <div class = "second"><img class = "right" id="cooper_smiling" width="200" src="images/cooper_smiling.JPG" alt="Black and white colored dog smiling directly at the camera"></div>
+                    <div class = "third"><img class = "left" id="cooper_flowers" width="200" src="images/cooper_flowers.jpeg" alt="Border collie / lab mix sniffing a bouquet of flowers in the sun"></div>
+                    <div class = "fourth"><img class = "right" id="cooper_puppy" width="200" src="images/cooper_puppy.JPG" alt="Small border collie / lab mix puppy laying on the carpet"></div>
+                </div>
+                    
+                <h3>Likes</h3>
+                <ul>
+                    <li>Peanut butter</li>
+                    <li>Going on long walks</li>
+                    <li>Sleeping</li>
+                </ul>
+                <!-- Chloe Emch -->
+            </div>
+        </main>
+    </body>
+</html>
+            
